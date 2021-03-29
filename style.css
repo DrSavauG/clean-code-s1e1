@@ -12,11 +12,11 @@ body {
   text-align: right;
 }
 
-.logo img {
+.logo--img {
   width: 100%;
 }
 
-.logo .more-info {
+.logo--more-info {
   font-family: fantasy, cursive;
 }
 
@@ -27,19 +27,19 @@ body {
   }
 }
 
-.section--add-item {
+.tasks {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
+.tasks--task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.tasks--row {
   display: flex;
 }
 
@@ -107,7 +107,7 @@ label[for="new-task"] {
   margin: 0 0 20px;
 }
 
-input#new-task {
+.tasks--task{
   width: 318px;
 }
 
