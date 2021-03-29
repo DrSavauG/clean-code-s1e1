@@ -65,7 +65,7 @@ const createNewTaskElement = function (taskString) {
 
 
 const addTask = function () {
-  console.log("Add Task...");
+  // console.log("Add Task...");
   //Create a new list item with the text from the #new-task:
   if (!taskInput.value) return;
   let listItem = createNewTaskElement(taskInput.value);
@@ -154,6 +154,10 @@ const ajaxRequest = function () {
 //Set the click handler to the addTask function.
 addButton.onclick = addTask;
 addButton.addEventListener("click", addTask);
+//ввод задания черех enter
+taskInput.addEventListener("keydown", (e)=>{
+  if (e.code ==="Enter") addTask()
+});
 addButton.addEventListener("click", ajaxRequest);
 
 
