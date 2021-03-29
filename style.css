@@ -86,7 +86,7 @@ h3 {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.todo--input{
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -99,7 +99,7 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.todo--input:focus {
   color: #333;
 }
 
@@ -118,7 +118,7 @@ input[type="text"]:focus {
 }
 
 /* Task list */
-li {
+.task-li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -128,7 +128,7 @@ li {
   align-items: center;
 }
 
-li>* {
+.task-li > * {
   vertical-align: middle;
 }
 
@@ -143,7 +143,7 @@ li>* {
   width: 226px;
 }
 
-li>input[type="text"] {
+.todo--input{
   width: 226px;
 }
 
