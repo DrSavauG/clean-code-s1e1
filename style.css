@@ -76,7 +76,8 @@ button {
 }
 
 /* Heading */
-.task-title {
+.task-title,
+.tasks--new-task {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -97,6 +98,7 @@ button {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  flex-grow: 1;
 }
 .tasks--task:focus,
 .todo--input:focus {
@@ -146,9 +148,9 @@ button {
   width: 226px;
 }
 
-.todo--btn-delete:hover {
+/* .todo--btn-delete:hover {
   color: #cf2323;
-}
+} */
 
 .task-li--btn--img{
   height: 2em;

@@ -156,7 +156,7 @@ addButton.onclick = addTask;
 addButton.addEventListener("click", addTask);
 //ввод задания черех enter
 taskInput.addEventListener("keydown", (e)=>{
-  if (e.code ==="Enter") addTask()
+  if (e.code ==="Enter") addTask();
 });
 addButton.addEventListener("click", ajaxRequest);
 
