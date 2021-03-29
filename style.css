@@ -50,7 +50,8 @@ body {
   padding: 0px;
 }
 
-.task-title {
+.task-title,
+.task-li {
   list-style: none;
 }
 
@@ -84,8 +85,8 @@ button {
   margin: 0;
   text-transform: uppercase;
 }
-
-.todo--input{
+.tasks--task,
+.todo--input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,7 +98,7 @@ button {
   font-family: Lato, sans-serif;
   color: #888;
 }
-
+.tasks--task:focus,
 .todo--input:focus {
   color: #333;
 }
@@ -121,7 +122,6 @@ button {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -161,7 +161,7 @@ button {
 }
 
 /* Completed */
-.completed-tasks label {
+.completed-tasks .todo--task-name {
   text-decoration: line-through;
   color: #888;
 }
@@ -171,13 +171,11 @@ button {
   display: none;
 }
 
-.todo--input,
-.edit-mode {
+.edit-mode .todo--input{
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode,
-.todo--task-name {
+.edit-mode .todo--task-name {
   display: none;
 }
