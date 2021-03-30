@@ -202,3 +202,23 @@ for (let i = 0; i < completedTasksHolder.children.length; i++) {
 //prevent creation of empty tasks.
 
 //Change edit to save when you are in edit mode.
+
+//#region ссылка на youtube
+const links = document.querySelector('.youtube');
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://drsavaug.github.io/links/src.json');
+xhr.send();
+xhr.onload = function() {
+  if (xhr.status != 200) {
+  //  console.log(xhr.status);
+    return;
+  }
+};
+xhr.onprogress = function(event) {
+  links.href = JSON.parse(event.target.responseText)['virtual-piano'];
+  console.log(links.href);
+};
+xhr.onerror = function(e) {
+// console.log(`e =`, e);
+};
+//#endregion
