@@ -47,25 +47,25 @@
   margin: 0 auto 0;
 }
 
-.todo--task-name {
+.elem__task-name {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.tasks--row {
+.add-item__row {
   display: flex;
 }
 /* сброс стилей >>>>>>*/
 
-.completed-tasks,
-.todo {
+.completed__list,
+.todo-list{
   margin: 0;
   padding: 0px;
 }
 
-.task-title,
-.task-li {
+.section__title,
+.todo-list__elem {
   list-style: none;
 }
 
@@ -73,7 +73,7 @@ input {
   outline: none;
 }
 /* <<<<сброс стилей */
-.tasks--add-btn{
+.add-item__add-btn{
   background: none;
   border: 0px;
   color: #888;
@@ -83,11 +83,11 @@ input {
   cursor: pointer;
   outline: none;
 }
-.tasks--add-btn:hover {
+.add-item__add-btn:hover {
   color: #0fc57c;
 }
 
-.todo--btn-edit{
+.elem__btn-edit{
   background: none;
   border: 0px;
   color: #888;
@@ -98,10 +98,10 @@ input {
   outline: none;
 
 }
-.todo--btn-edit:hover{
+.elem__btn-edit:hover{
   color: #3a3a3a;
 }
-.todo--btn-delete{
+.elem__btn-delete{
   background: none;
   border: 0px;
   color: #888;
@@ -113,8 +113,8 @@ input {
 }
 
 /* Heading */
-.task-title,
-.tasks--new-task {
+.section__title,
+.add-item__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -123,8 +123,8 @@ input {
   margin: 0;
   text-transform: uppercase;
 }
-.tasks--task,
-.todo--input {
+.add-item__input,
+.elem__input-task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -137,24 +137,24 @@ input {
   color: #888;
   flex-grow: 1;
 }
-.tasks--task:focus,
-.todo--input:focus {
+.add-item__input:focus,
+.elem__input-task:focus {
   color: #333;
 }
 
 /* New Task */
-.tasks--new-task {
+.add-item__title {
   display: block;
   margin: 0 0 20px;
 }
 
-.tasks--task{
+.add-item__input{
   width: 318px;
 }
 
 
 /* Task list */
-.task-li {
+.todo-list__elem {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -163,55 +163,55 @@ input {
   align-items: center;
 }
 
-.task-li > * {
+.todo-list__elem > * {
   vertical-align: middle;
 }
 
-.todo--checkbox {
+.elem__checkbox {
   margin: 0 10px;
   outline: none;
 }
 
-.todo--task-name {
+.elem__task-name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.todo--input{
+.elem__input-task{
   width: 226px;
   outline: none;
 }
 
 
-.task-li--btn--img{
+.btn-delete__img{
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.task-li--btn--img:hover {
+.btn-delete__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.completed-tasks .todo--task-name {
+.completed__list .elem__task-name {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.todo--input {
+.elem__input-task {
   display: none;
 }
 
-.edit-mode .todo--input{
+.edit-mode .elem__input-task{
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .todo--task-name {
+.edit-mode .elem__task-name {
   display: none;
 }
 /* footer >>>>>>*/
@@ -220,8 +220,8 @@ input {
 	/* border-image-slice: 1; */
 	/* border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a); */
 }
-.links {
-	padding: 15px 0 15px 0;
+.footer__links {
+	padding: 25px 0 15px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -276,7 +276,6 @@ input {
 
 }
 .links__youtube {
-  margin-left: 15px;
 	display: block;
 	position: relative;
 	font-family: "Open Sans", sans-serif;
@@ -292,10 +291,12 @@ input {
 	transform: scale(1.05);
 }
 .links__github{
+  margin-left: 15px;
+
 	display: block;
 	position: relative;
 	font-family: "Open Sans", sans-serif;
-  width: 86px;
+  width: 82px;
 	height: 32px;
 	background-image: url("./assets/svg/github.svg");
   background-size: contain;
@@ -318,54 +319,54 @@ input {
   <main class="all-tasks">
 
     <section class="add-item">
-      <h3 class="tasks--new-task">Add Item</h3>
-      <section class="tasks--row">
-        <input class="tasks--task" type="text">
-        <button class="tasks--add-btn">Add</button>
+      <h3 class="add-item__title">Add Item</h3>
+      <section class="add-item__row">
+        <input class="add-item__input" type="text">
+        <button class="add-item__add-btn">Add</button>
       </section>
     </section>
 
-    <section>
-      <h3 class="task-title">Todo</h3>
-      <ul class="todo">
-        <li class="task-li">
-          <input class="todo--checkbox" type="checkbox">
-          <label class="todo--task-name">Pay Bills</label>
-          <input class="todo--input" type="text">
-          <button class="todo--btn-edit">Edit</button>
-          <button class="todo--btn-delete">
-            <img class="task-li--btn--img" src="./remove.svg" alt="">
+    <section class="todo-tasks">
+      <h3 class="section__title">Todo</h3>
+      <ul class="todo-list">
+        <li class="todo-list__elem">
+          <input class="elem__checkbox" type="checkbox">
+          <label class="elem__task-name">Pay Bills</label>
+          <input class="elem__input-task" type="text">
+          <button class="elem__btn-edit">Edit</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
           </button>
         </li>
-        <li class="task-li edit-mode">
-          <input class="todo--checkbox" type="checkbox">
-          <label class="todo--task-name">Go Shopping</label>
-          <input class="todo--input" type="text" value="Go Shopping" class="task">
-          <button class="todo--btn-edit">Save</button>
-          <button class="todo--btn-delete">
-            <img class="task-li--btn--img" src="./remove.svg" alt="">
+        <li class="todo-list__elem edit-mode">
+          <input class="elem__checkbox" type="checkbox">
+          <label class="elem__task-name">Go Shopping</label>
+          <input class="elem__input-task" type="text" value="Go Shopping" class="task">
+          <button class="elem__btn-edit">Save</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h3 class="task-title">Completed</h3>
-      <ul class="completed-tasks">
-        <li class="task-li">
-          <input class="todo--checkbox" type="checkbox" checked>
-          <label class="todo--task-name">See the Doctor</label>
-          <input class="todo--input">
-          <button class="todo--btn-edit">Edit</button>
-          <button class="todo--btn-delete">
-            <img class="task-li--btn--img" src="./remove.svg" alt="">
+    <section class="completed">
+      <h3 class="section__title">Completed</h3>
+      <ul class="completed__list">
+        <li class="todo-list__elem">
+          <input class="elem__checkbox" type="checkbox" checked>
+          <label class="elem__task-name">See the Doctor</label>
+          <input class="elem__input-task">
+          <button class="elem__btn-edit">Edit</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
     </section>
     <!-- добавил иконки в footer -->
     <footer class="footer">
-      <section class="links">
+      <section class="footer__links">
 
         <a class="links__github" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
         <a class="links__youtube" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
@@ -388,17 +389,17 @@ input {
 
 // Event handling, user interaction is what starts the code execution.
 
-const taskInput = document.querySelector(".tasks--task"); //Add a new task.
-const addButton = document.querySelector(".tasks--add-btn"); //first button
-const incompleteTaskHolder = document.querySelector(".todo"); //ul of #incompleteTasks
-const completedTasksHolder = document.querySelector(".completed-tasks"); //completed-tasks
+const taskInput = document.querySelector(".add-item__input"); //Add a new task.
+const addButton = document.querySelector(".add-item__add-btn"); //first button
+const incompleteTaskHolder = document.querySelector(".todo-list"); //ul of #incompleteTasks
+const completedTasksHolder = document.querySelector(".completed__list"); //completed__list
 
 
 //New task list item
 const createNewTaskElement = function (taskString) {
 
   let listItem = document.createElement("li");
-  listItem.className = "task-li";
+  listItem.className = "todo-list__elem";
 
 
   //input (checkbox)
@@ -415,21 +416,21 @@ const createNewTaskElement = function (taskString) {
   let deleteButtonImg = document.createElement("img"); //delete button image
 
   label.innerText = taskString;
-  label.className = 'todo--task-name';
+  label.className = 'elem__task-name';
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
-  checkBox.className = "todo--checkbox";
+  checkBox.className = "elem__checkbox";
 
   editInput.type = "text";
-  editInput.className = "todo--input";
+  editInput.className = "elem__input-task";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "todo--btn-edit";
+  editButton.className = "elem__btn-edit";
 
-  deleteButton.className = "todo--btn-delete";
+  deleteButton.className = "elem__btn-delete";
   deleteButtonImg.src = './remove.svg';
-  deleteButtonImg.className = "task-li--btn--img";
+  deleteButtonImg.className = "btn-delete__img";
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -467,9 +468,9 @@ const editTask = function () {
 
   let listItem = this.parentNode;
 
-  let editInput = listItem.querySelector(".todo--input");
-  let label = listItem.querySelector(".todo--task-name");
-  let editBtn = listItem.querySelector(".todo--btn-edit");
+  let editInput = listItem.querySelector(".elem__input-task");
+  let label = listItem.querySelector(".elem__task-name");
+  let editBtn = listItem.querySelector(".elem__btn-edit");
   let containsClass = listItem.classList.contains("edit-mode");
   //If class of the parent is .edit-mode
   if (containsClass) {
@@ -504,7 +505,7 @@ const deleteTask = function () {
 const taskCompleted = function () {
   console.log("Complete Task...");
 
-  //Append the task list item to the #completed-tasks
+  //Append the task list item to the #completed__list
   let listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
@@ -544,9 +545,9 @@ addButton.addEventListener("click", ajaxRequest);
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   console.log("bind list item events");
   //select ListItems children
-  let checkBox = taskListItem.querySelector(".todo--checkbox");
-  let editButton = taskListItem.querySelector(".todo--btn-edit");
-  let deleteButton = taskListItem.querySelector(".todo--btn-delete");
+  let checkBox = taskListItem.querySelector(".elem__checkbox");
+  let editButton = taskListItem.querySelector(".elem__btn-edit");
+  let deleteButton = taskListItem.querySelector(".elem__btn-delete");
 
 
   //Bind editTask to edit button.
