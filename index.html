@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Todo App</title>
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" media="screen">
 </head>
@@ -35,7 +37,7 @@
           <label class="todo--task-name">Pay Bills</label>
           <input class="todo--input" type="text">
           <button class="todo--btn-edit">Edit</button>
-          <button class="button todo--btn-delete">
+          <button class="todo--btn-delete">
             <img class="task-li--btn--img" src="./remove.svg" alt="">
           </button>
         </li>
@@ -43,8 +45,8 @@
           <input class="todo--checkbox" type="checkbox">
           <label class="todo--task-name">Go Shopping</label>
           <input class="todo--input" type="text" value="Go Shopping" class="task">
-          <button class="button todo--btn-edit">Save</button>
-          <button class="button todo--btn-delete">
+          <button class="todo--btn-edit">Save</button>
+          <button class="todo--btn-delete">
             <img class="task-li--btn--img" src="./remove.svg" alt="">
           </button>
         </li>
@@ -58,14 +60,24 @@
           <input class="todo--checkbox" type="checkbox" checked>
           <label class="todo--task-name">See the Doctor</label>
           <input class="todo--input">
-          <button class="button todo--btn-edit">Edit</button>
-          <button class="button todo--btn-delete">
+          <button class="todo--btn-edit">Edit</button>
+          <button class="todo--btn-delete">
             <img class="task-li--btn--img" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
     </section>
+    <!-- добавил иконки в footer -->
+    <footer class="footer">
+      <section class="footer-container">
 
+        <a class="youtube" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="github" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="rss" href="https://rs.school/js/" target="_blank" rel="noopener noreferrer">
+          <span class="rss-year">'21</span>
+        </a>
+      </section>
+    </footer>
   </main>
   <script src="app.js"></script>
 </body>
