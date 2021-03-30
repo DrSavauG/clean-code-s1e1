@@ -8,78 +8,81 @@
 
   <title>Todo App</title>
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;800&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" media="screen">
 </head>
 
 <body class="page-content">
   <header class="logo">
-    <img class="logo--img" src="./eisenhower-matrix.jpg"
+    <img class="logo__img" src="./eisenhower-matrix.jpg"
       alt="the Eisenhower matrix, how to make Decisions on what's urgent & important. this table includes two columns and two rows: 1th important & urgent - do, 2th important & not urgent - plan; 3th not important & urgent - delegate, not important & not urgent - eliminate">
-    <a class="logo--more-info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    <a class="logo__more-info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
   </header>
-  <main class="tasks">
+  <main class="all-tasks">
 
-    <section>
-      <h3 class="tasks--new-task">Add Item</h3>
-      <section class="tasks--row">
-        <input class="tasks--task" type="text">
-        <button class="tasks--add-btn">Add</button>
+    <section class="add-item">
+      <h3 class="add-item__title">Add Item</h3>
+      <section class="add-item__row">
+        <input class="add-item__input" type="text">
+        <button class="add-item__add-btn">Add</button>
       </section>
     </section>
 
-    <section>
-      <h3 class="task-title">Todo</h3>
-      <ul class="todo">
-        <li class="task-li">
-          <input class="todo--checkbox" type="checkbox">
-          <label class="todo--task-name">Pay Bills</label>
-          <input class="todo--input" type="text">
-          <button class="todo--btn-edit">Edit</button>
-          <button class="todo--btn-delete">
-            <img class="task-li--btn--img" src="./remove.svg" alt="">
+    <section class="todo-tasks">
+      <h3 class="section__title">Todo</h3>
+      <ul class="todo-list">
+        <li class="todo-list__elem">
+          <input class="elem__checkbox" type="checkbox">
+          <label class="elem__task-name">Pay Bills</label>
+          <input class="elem__input-task" type="text">
+          <button class="elem__btn-edit">Edit</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
           </button>
         </li>
-        <li class="task-li edit-mode">
-          <input class="todo--checkbox" type="checkbox">
-          <label class="todo--task-name">Go Shopping</label>
-          <input class="todo--input" type="text" value="Go Shopping" class="task">
-          <button class="todo--btn-edit">Save</button>
-          <button class="todo--btn-delete">
-            <img class="task-li--btn--img" src="./remove.svg" alt="">
+        <li class="todo-list__elem edit-mode">
+          <input class="elem__checkbox" type="checkbox">
+          <label class="elem__task-name">Go Shopping</label>
+          <input class="elem__input-task" type="text" value="Go Shopping" class="task">
+          <button class="elem__btn-edit">Save</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h3 class="task-title">Completed</h3>
-      <ul class="completed-tasks">
-        <li class="task-li">
-          <input class="todo--checkbox" type="checkbox" checked>
-          <label class="todo--task-name">See the Doctor</label>
-          <input class="todo--input">
-          <button class="todo--btn-edit">Edit</button>
-          <button class="todo--btn-delete">
-            <img class="task-li--btn--img" src="./remove.svg" alt="">
+    <section class="completed">
+      <h3 class="section__title">Completed</h3>
+      <ul class="completed__list">
+        <li class="todo-list__elem">
+          <input class="elem__checkbox" type="checkbox" checked>
+          <label class="elem__task-name">See the Doctor</label>
+          <input class="elem__input-task">
+          <button class="elem__btn-edit">Edit</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
     </section>
     <!-- добавил иконки в footer -->
     <footer class="footer">
-      <section class="footer-container">
+      <section class="footer__links">
 
-        <a class="youtube" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
-        <a class="github" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
-        <a class="rss" href="https://rs.school/js/" target="_blank" rel="noopener noreferrer">
-          <span class="rss-year">'21</span>
+        <a class="links__github" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="links__youtube" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="links__rss" href="https://rs.school/js/" target="_blank" rel="noopener noreferrer">
+          <span class="links__rss__year">'21</span>
         </a>
       </section>
     </footer>
   </main>
   <script src="app.js"></script>
+
 </body>
 
 </html>

@@ -12,11 +12,11 @@
   text-align: right;
 }
 
-.logo--img {
+.logo__img {
   width: 100%;
 }
 
-.logo--more-info {
+.logo__more-info {
   font-family: fantasy, cursive;
 }
 
@@ -27,39 +27,41 @@
   }
 }
 
-.tasks {
+.all-tasks {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.todo--task-name {
+.elem__task-name {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.tasks--row {
+.add-item__row {
   display: flex;
 }
+
 /* сброс стилей >>>>>>*/
 
-.completed-tasks,
-.todo {
+.completed__list,
+.todo-list {
   margin: 0;
   padding: 0px;
 }
 
-.task-title,
-.task-li {
+.section__title,
+.todo-list__elem {
   list-style: none;
 }
 
 input {
   outline: none;
 }
+
 /* <<<<сброс стилей */
-.tasks--add-btn{
+.add-item__add-btn {
   background: none;
   border: 0px;
   color: #888;
@@ -69,11 +71,12 @@ input {
   cursor: pointer;
   outline: none;
 }
-.tasks--add-btn:hover {
+
+.add-item__add-btn:hover {
   color: #0fc57c;
 }
 
-.todo--btn-edit{
+.elem__btn-edit {
   background: none;
   border: 0px;
   color: #888;
@@ -84,10 +87,12 @@ input {
   outline: none;
 
 }
-.todo--btn-edit:hover{
+
+.elem__btn-edit:hover {
   color: #3a3a3a;
 }
-.todo--btn-delete{
+
+.elem__btn-delete {
   background: none;
   border: 0px;
   color: #888;
@@ -99,8 +104,8 @@ input {
 }
 
 /* Heading */
-.task-title,
-.tasks--new-task {
+.section__title,
+.add-item__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -109,8 +114,9 @@ input {
   margin: 0;
   text-transform: uppercase;
 }
-.tasks--task,
-.todo--input {
+
+.add-item__input,
+.elem__input-task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -123,24 +129,25 @@ input {
   color: #888;
   flex-grow: 1;
 }
-.tasks--task:focus,
-.todo--input:focus {
+
+.add-item__input:focus,
+.elem__input-task:focus {
   color: #333;
 }
 
 /* New Task */
-.tasks--new-task {
+.add-item__title {
   display: block;
   margin: 0 0 20px;
 }
 
-.tasks--task{
+.add-item__input {
   width: 318px;
 }
 
 
 /* Task list */
-.task-li {
+.todo-list__elem {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -149,144 +156,153 @@ input {
   align-items: center;
 }
 
-.task-li > * {
+.todo-list__elem>* {
   vertical-align: middle;
 }
 
-.todo--checkbox {
+.elem__checkbox {
   margin: 0 10px;
   outline: none;
 }
 
-.todo--task-name {
+.elem__task-name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.todo--input{
+.elem__input-task {
   width: 226px;
   outline: none;
 }
 
 
-.task-li--btn--img{
+.btn-delete__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.task-li--btn--img:hover {
+.btn-delete__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.completed-tasks .todo--task-name {
+.completed__list .elem__task-name {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.todo--input {
+.elem__input-task {
   display: none;
 }
 
-.edit-mode .todo--input{
+.edit-mode .elem__input-task {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .todo--task-name {
+.edit-mode .elem__task-name {
   display: none;
 }
+
 /* footer >>>>>>*/
 .footer {
-	border-top: 2px solid;
-	/* border-image-slice: 1; */
-	/* border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a); */
+  border-top: 2px solid;
+  /* border-image-slice: 1; */
+  /* border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a); */
 }
-.footer-container {
-	padding: 15px 0 15px 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	/* max-width: 1140px; */
-	margin: 0 auto;
+
+.footer__links {
+  padding: 25px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* max-width: 1140px; */
+  margin: 0 auto;
   /* margin-left: 15px; */
   /* margin-right: 15px; */
 }
 
-.rss {
-	display: block;
-	position: relative;
+.links__rss {
+  display: block;
+  position: relative;
   /* right: 25px; */
   margin-right: 15px;
-	font-family: "Open Sans", sans-serif;
-	width: 86px;
-	height: 32px;
-	background-image: url("./assets/svg/rss.svg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding-right: 25px;
-	transition: 0.3s all;
+  font-family: "Open Sans", sans-serif;
+  width: 86px;
+  height: 32px;
+  background-image: url("./assets/svg/rss.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: 25px;
+  transition: 0.3s all;
 
   /* margin-right: 25px; */
 }
-.rss-year {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+
+.links__rss__year {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*! добавить шрифт в index.html */
   font-family: "Open Sans", sans-serif;
-	font-size: 21px;
+  font-size: 21px;
   font-weight: normal;
-	letter-spacing: -2px;
-	color: #000;
-	line-height: 0.9;
-	font-weight: bold;
-	transition: 0.3s all;
-}
-.rss:hover .rss-year
-  {
-	right: -5px;
-	letter-spacing: 0;
-	transform: scale(1.05);
+  letter-spacing: -2px;
+  color: #000;
+  line-height: 0.9;
+  font-weight: bold;
+  transition: 0.3s all;
 }
 
-.rss:hover{
+.links__rss:hover .links__rss__year {
+  right: -5px;
+  letter-spacing: 0;
+  transform: scale(1.05);
+}
+
+.links__rss:hover {
   transform: scale(1.05);
 
 }
-.youtube {
-  margin-left: 15px;
-	display: block;
-	position: relative;
-	font-family: "Open Sans", sans-serif;
-	width: 86px;
-	height: 32px;
-	background-image: url("./assets/svg/youtube-2-1.svg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: left center;
-	transition: 0.3s all;
-}
-.youtube:hover{
-	transform: scale(1.05);
-}
-.github {
-	display: block;
-	position: relative;
-	font-family: "Open Sans", sans-serif;
-  width: 86px;
-	height: 32px;
-	background-image: url("./assets/svg/github.svg");
+
+.links__youtube {
+  display: block;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  width: 100px;
+  height: 50px;
+  background-image: url("./assets/svg/youtube-2-1.svg");
   background-size: contain;
-	background-repeat: no-repeat;
-	background-position: left center;
-	transition: 0.3s all;
+  background-repeat: no-repeat;
+  background-position: left center;
+  transition: 0.3s all;
 }
+
+.links__youtube:hover {
+  transform: scale(1.05);
+}
+
+.links__github {
+  margin-left: 15px;
+
+  display: block;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  width: 82px;
+  height: 32px;
+  background-image: url("./assets/svg/github.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  transition: 0.3s all;
+}
+
 .github:hover {
-	transform: scale(1.05);
+  transform: scale(1.05);
 }

@@ -8,17 +8,17 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-const taskInput = document.querySelector(".tasks--task"); //Add a new task.
-const addButton = document.querySelector(".tasks--add-btn"); //first button
-const incompleteTaskHolder = document.querySelector(".todo"); //ul of #incompleteTasks
-const completedTasksHolder = document.querySelector(".completed-tasks"); //completed-tasks
+const taskInput = document.querySelector(".add-item__input"); //Add a new task.
+const addButton = document.querySelector(".add-item__add-btn"); //first button
+const incompleteTaskHolder = document.querySelector(".todo-list"); //ul of #incompleteTasks
+const completedTasksHolder = document.querySelector(".completed__list"); //completed__list
 
 
 //New task list item
 const createNewTaskElement = function (taskString) {
 
   let listItem = document.createElement("li");
-  listItem.className = "task-li";
+  listItem.className = "todo-list__elem";
 
 
   //input (checkbox)
@@ -35,21 +35,21 @@ const createNewTaskElement = function (taskString) {
   let deleteButtonImg = document.createElement("img"); //delete button image
 
   label.innerText = taskString;
-  label.className = 'todo--task-name';
+  label.className = 'elem__task-name';
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
-  checkBox.className = "todo--checkbox";
+  checkBox.className = "elem__checkbox";
 
   editInput.type = "text";
-  editInput.className = "todo--input";
+  editInput.className = "elem__input-task";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "todo--btn-edit";
+  editButton.className = "elem__btn-edit";
 
-  deleteButton.className = "todo--btn-delete";
+  deleteButton.className = "elem__btn-delete";
   deleteButtonImg.src = './remove.svg';
-  deleteButtonImg.className = "task-li--btn--img";
+  deleteButtonImg.className = "btn-delete__img";
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -87,9 +87,9 @@ const editTask = function () {
 
   let listItem = this.parentNode;
 
-  let editInput = listItem.querySelector(".todo--input");
-  let label = listItem.querySelector(".todo--task-name");
-  let editBtn = listItem.querySelector(".todo--btn-edit");
+  let editInput = listItem.querySelector(".elem__input-task");
+  let label = listItem.querySelector(".elem__task-name");
+  let editBtn = listItem.querySelector(".elem__btn-edit");
   let containsClass = listItem.classList.contains("edit-mode");
   //If class of the parent is .edit-mode
   if (containsClass) {
@@ -124,7 +124,7 @@ const deleteTask = function () {
 const taskCompleted = function () {
   console.log("Complete Task...");
 
-  //Append the task list item to the #completed-tasks
+  //Append the task list item to the #completed__list
   let listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
@@ -155,8 +155,8 @@ const ajaxRequest = function () {
 addButton.onclick = addTask;
 addButton.addEventListener("click", addTask);
 //ввод задания черех enter
-taskInput.addEventListener("keydown", (e)=>{
-  if (e.code ==="Enter") addTask();
+taskInput.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") addTask();
 });
 addButton.addEventListener("click", ajaxRequest);
 
@@ -164,9 +164,9 @@ addButton.addEventListener("click", ajaxRequest);
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   console.log("bind list item events");
   //select ListItems children
-  let checkBox = taskListItem.querySelector(".todo--checkbox");
-  let editButton = taskListItem.querySelector(".todo--btn-edit");
-  let deleteButton = taskListItem.querySelector(".todo--btn-delete");
+  let checkBox = taskListItem.querySelector(".elem__checkbox");
+  let editButton = taskListItem.querySelector(".elem__btn-edit");
+  let deleteButton = taskListItem.querySelector(".elem__btn-delete");
 
 
   //Bind editTask to edit button.
@@ -204,21 +204,17 @@ for (let i = 0; i < completedTasksHolder.children.length; i++) {
 //Change edit to save when you are in edit mode.
 
 //#region ссылка на youtube
-const links = document.querySelector('.youtube');
-let xhr = new XMLHttpRequest();
+const linkYouTube = document.querySelector('.links__youtube');
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://drsavaug.github.io/links/src.json');
 xhr.send();
-xhr.onload = function() {
+xhr.onload = function () {
   if (xhr.status != 200) {
-  //  console.log(xhr.status);
     return;
   }
 };
-xhr.onprogress = function(event) {
-  links.href = JSON.parse(event.target.responseText)['virtual-piano'];
-  console.log(links.href);
-};
-xhr.onerror = function(e) {
-// console.log(`e =`, e);
+xhr.onprogress = function (event) {
+  linkYouTube.href = JSON.parse(event.target.responseText)['clean-code-s1e1'];
+  console.log(linkYouTube.href);
 };
 //#endregion
