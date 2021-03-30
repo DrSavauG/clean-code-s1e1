@@ -45,9 +45,9 @@ const createNewTaskElement = function (taskString) {
   editInput.className = "todo--input";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "button todo--btn-edit";
+  editButton.className = "todo--btn-edit";
 
-  deleteButton.className = "button todo--btn-delete";
+  deleteButton.className = "todo--btn-delete";
   deleteButtonImg.src = './remove.svg';
   deleteButtonImg.className = "task-li--btn--img";
   deleteButton.appendChild(deleteButtonImg);
