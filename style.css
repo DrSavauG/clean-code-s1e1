@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.page-content {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -55,13 +55,11 @@ body {
   list-style: none;
 }
 
-input,
-button {
+input {
   outline: none;
 }
 /* <<<<сброс стилей */
-
-.button {
+.tasks--add-btn{
   background: none;
   border: 0px;
   color: #888;
@@ -69,10 +67,35 @@ button {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  outline: none;
+}
+.tasks--add-btn:hover {
+  color: #0fc57c;
 }
 
-.button:hover {
+.todo--btn-edit{
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+  outline: none;
+
+}
+.todo--btn-edit:hover{
   color: #3a3a3a;
+}
+.todo--btn-delete{
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+  outline: none;
 }
 
 /* Heading */
@@ -115,9 +138,6 @@ button {
   width: 318px;
 }
 
-.tasks--add-btn:hover {
-  color: #0fc57c;
-}
 
 /* Task list */
 .task-li {
@@ -135,6 +155,7 @@ button {
 
 .todo--checkbox {
   margin: 0 10px;
+  outline: none;
 }
 
 .todo--task-name {
@@ -146,11 +167,9 @@ button {
 
 .todo--input{
   width: 226px;
+  outline: none;
 }
 
-/* .todo--btn-delete:hover {
-  color: #cf2323;
-} */
 
 .task-li--btn--img{
   height: 2em;
