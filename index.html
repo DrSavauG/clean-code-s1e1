@@ -1,19 +1,94 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Todo App</title>
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="screen">
+  <link rel="stylesheet" href="./assets/style-additional.css" media="screen">
+</head>
+
+<body class="page-content">
+
+  <header class="logo">
+    <img class="logo__img" src="./eisenhower-matrix.jpg"
+      alt="the Eisenhower matrix, how to make Decisions on what`s urgent & important. this table includes two columns and two rows: 1th important & urgent - do, 2th important & not urgent - plan; 3th not important & urgent - delegate, not important & not urgent - eliminate">
+    <a href="https://goal-life.com/page/method/matrix-eisenhower"
+      class="logo__more-info">Want more details?</a>
+  </header>
+  <main class="all-tasks">
+
+    <section class="add-item">
+      <h3 class="add-item__title">Add Item</h3>
+      <section class="add-item__row">
+        <input class="add-item__input" type="text">
+        <button class="add-item__add-btn">Add</button>
+      </section>
+    </section>
+
+    <section class="todo-tasks">
+      <h3 class="section__title">Todo</h3>
+      <ul class="todo-list">
+        <li class="todo-list__elem">
+          <input class="elem__checkbox" type="checkbox">
+          <label class="elem__task-name">Pay Bills</label>
+          <input class="elem__input-task" type="text">
+          <button class="elem__btn-edit">Edit</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
+          </button>
+        </li>
+        <li class="todo-list__elem edit-mode">
+          <input class="elem__checkbox" type="checkbox">
+          <label class="elem__task-name">Go Shopping</label>
+          <input class="elem__input-task" type="text" value="Go Shopping" class="task">
+          <button class="elem__btn-edit">Save</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="completed">
+      <h3 class="section__title">Completed</h3>
+      <ul class="completed__list">
+        <li class="todo-list__elem">
+          <input class="elem__checkbox" type="checkbox" checked>
+          <label class="elem__task-name">See the Doctor</label>
+          <input class="elem__input-task">
+          <button class="elem__btn-edit">Edit</button>
+          <button class="elem__btn-delete">
+            <img class="btn-delete__img" src="./remove.svg" alt="">
+          </button>
+        </li>
+      </ul>
+    </section>
+    
+    <!-- добавил иконки в footer -->
+    <footer class="footer">
+      <section class="footer__links">
+
+        <a class="links__github" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="links__youtube" href="https://github.com/drsavaug/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="links__rss" href="https://rs.school/js/" target="_blank" rel="noopener noreferrer">
+          <span class="links__rss-year">`21</span>
+        </a>
+      </section>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+  <script src="./assets/script-additional.js"></script>
+
 </body>
+
 </html>
