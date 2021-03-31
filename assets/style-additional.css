@@ -29,7 +29,7 @@
   transition: 0.3s all;
 }
 
-.links__rss__year {
+.links__rss-year {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -44,7 +44,7 @@
   transition: 0.3s all;
 }
 
-.links__rss:hover .links__rss__year {
+.links__rss:hover .links__rss-year {
   right: -5px;
   letter-spacing: 0;
   transform: scale(1.15);
