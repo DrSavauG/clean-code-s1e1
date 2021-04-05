@@ -1,7 +1,8 @@
 1. Task: https://rolling-scopes-school.github.io/stage0/#/stage1/tasks/clean-code/clean-code-s1e1
 2. Screenshot:
-   ![] ()
-3. Deploy: ,,,,,,,,,,,,,,,,,,,,,,
+   
+   <img width="489" alt="Снимок экрана 11" src="https://user-images.githubusercontent.com/46158444/113153067-67fa8b80-923f-11eb-9694-68a9b7e6018c.png">
+3. Deploy: https://drsavaug.github.io/clean-code-s1e1/
 4. Done 31.03.2021 / deadline 6.04.2021
 5. Score: 45 / 45 
  -  Выполненные пункты:
